@@ -8,10 +8,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class VerifyRegisterWithYesOption {
-
-	public static void main(String[] args) throws InterruptedException {
+@Test
+	public void main() throws InterruptedException {
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
@@ -45,7 +46,7 @@ public class VerifyRegisterWithYesOption {
 		return new Date().toString().replaceAll(" ","").replaceAll("\\:","")+"@gamil.com";
 	}
 	
-	public static String GetNewNumber() {
+	public String GetNewNumber() {
 		String prefix="23";
 		Random ran=new Random();
 		StringBuilder str=new StringBuilder();
