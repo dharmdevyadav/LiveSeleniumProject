@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="newwebsiteautomation.register.EmailVerificationAmzone">
+      <class name="newwebsiteautomation.register.VerificationForWithoutFillDetail">
         <methods>
-          <include name="mainEmail"/>
+          <include name="main"/>
         </methods>
-      </class> <!-- newwebsiteautomation.register.EmailVerificationAmzone -->
+      </class> <!-- newwebsiteautomation.register.VerificationForWithoutFillDetail -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
