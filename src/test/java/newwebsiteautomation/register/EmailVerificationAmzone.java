@@ -23,8 +23,9 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class EmailVerificationAmzone {
-
+//For Both Email Body Read and get OTP verification and also hyperlink click verifiaction this code is useful
 	public String finalOTP;
+	public String hyperlink;
 	WebDriver driver;
 	@Test
 	public void mainEmail() throws InterruptedException {
@@ -82,14 +83,22 @@ public class EmailVerificationAmzone {
 		            
 		            if(message.getSubject().contains("amazon.in: Password recovery")) {
 		            	extractAndPrintLinks(body);
-		            	Thread.sleep(3000);
-		            	driver.findElement(By.xpath("//input[@id='input-box-otp']")).sendKeys(finalOTP);
-		            	Thread.sleep(1000);
-			            driver.findElement(By.xpath("//input[@aria-labelledby='cvf-submit-otp-button-announce']")).click();
-			            Thread.sleep(2000);
-			            driver.findElement(By.xpath("//input[@id='ap_fpp_password']")).sendKeys("Dharma123@");
-			            driver.findElement(By.xpath("//input[@id='ap_fpp_password_check']")).sendKeys("Dharma123@");
-			            driver.findElement(By.xpath("//input[@id='continue']")).click();
+		            	
+		            	Thread.sleep(5000);
+						/*
+						 * driver.findElement(By.xpath("//input[@id='input-box-otp']")).sendKeys(
+						 * finalOTP); Thread.sleep(1000); driver.findElement(By.xpath(
+						 * "//input[@aria-labelledby='cvf-submit-otp-button-announce']")).click();
+						 * Thread.sleep(2000);
+						 * driver.findElement(By.xpath("//input[@id='ap_fpp_password']")).sendKeys(
+						 * "Dharma123@");
+						 * driver.findElement(By.xpath("//input[@id='ap_fpp_password_check']")).sendKeys
+						 * ("Dharma123@");
+						 * driver.findElement(By.xpath("//input[@id='continue']")).click();
+						 */
+			            
+			            //extractFirstLink(body);
+			            driver.navigate().to(extractFirstLink(body));
 		            }
 		            break;
 
@@ -151,6 +160,19 @@ public class EmailVerificationAmzone {
 		        System.out.println(finalOTP);
 	        }
 	        
+	    }
+	    
+	 // Use regex to extract first link from email content
+	    private String extractFirstLink(String text) {
+	    	hyperlink=null;
+	        String regex = "(https?://\\S+)";
+	        Pattern pattern = Pattern.compile(regex);
+	        Matcher matcher = pattern.matcher(text);
+	        if (matcher.find()) {
+	        	hyperlink=matcher.group(1);
+	            return matcher.group(1);
+	        }
+	        return null;
 	    }
 	
 	/*

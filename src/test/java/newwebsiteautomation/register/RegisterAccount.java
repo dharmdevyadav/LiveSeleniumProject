@@ -17,7 +17,7 @@ public class RegisterAccount {
 		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 		 driver.manage().window().maximize();
 		 driver.get("https://tutorialsninja.com/demo/");
-		 
+		  
 		 driver.findElement(By.xpath("//span[text()='My Account']")).click();
 		 driver.findElement(By.xpath("//a[text()='Register']")).click();
 		 driver.findElement(By.id("input-firstname")).sendKeys("Ramanan");
