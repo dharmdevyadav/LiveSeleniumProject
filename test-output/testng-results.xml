@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-30T15:08:55 IST" name="Default suite" finished-at="2025-09-30T15:09:00 IST" duration-ms="4654">
+  <suite started-at="2025-10-03T09:56:25 IST" name="Default suite" finished-at="2025-10-03T09:56:48 IST" duration-ms="23117">
     <groups>
     </groups>
-    <test started-at="2025-09-30T15:08:55 IST" name="Default test" finished-at="2025-09-30T15:09:00 IST" duration-ms="4654">
-      <class name="newwebsiteautomation.register.RegisterAccount">
-        <test-method signature="RegisterPage()[pri:0, instance:newwebsiteautomation.register.RegisterAccount@3349e9bb]" started-at="2025-09-30T15:08:55 IST" name="RegisterPage" finished-at="2025-09-30T15:09:00 IST" duration-ms="4602" status="PASS">
+    <test started-at="2025-10-03T09:56:25 IST" name="Default test" finished-at="2025-10-03T09:56:48 IST" duration-ms="23117">
+      <class name="newwebsiteautomation.register.EmailVerificationAmzone">
+        <test-method signature="mainEmail()[pri:0, instance:newwebsiteautomation.register.EmailVerificationAmzone@74235045]" started-at="2025-10-03T09:56:25 IST" name="mainEmail" finished-at="2025-10-03T09:56:48 IST" duration-ms="23070" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- RegisterPage -->
-      </class> <!-- newwebsiteautomation.register.RegisterAccount -->
+        </test-method> <!-- mainEmail -->
+      </class> <!-- newwebsiteautomation.register.EmailVerificationAmzone -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
